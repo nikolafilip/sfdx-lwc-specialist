@@ -20,6 +20,7 @@ export default class BoatAddReviewForm extends LightningElement {
 		return this.boatId;
 	}
 	set recordId(value) {
+		this.setAttribute('boatId', value);
 		this.boatId = value;
 	}
 

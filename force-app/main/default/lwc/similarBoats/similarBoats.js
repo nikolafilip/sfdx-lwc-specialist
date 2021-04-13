@@ -13,6 +13,7 @@ export default class SimilarBoats extends NavigationMixin(LightningElement) {
 		return this.boatId;
 	}
 	set recordId(value) {
+		this.setAttribute('boatId', value);
 		this.boatId = value;
 	}
 

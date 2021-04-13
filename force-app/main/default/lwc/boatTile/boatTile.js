@@ -9,9 +9,11 @@ export default class BoatTile extends LightningElement {
     @api selectedBoatId;
 
     get backgroundStyle() {
-        secondSlashIndex = boat.Picture__c.indexOf('/', boat.Picture__c.indexOf('/') + 1);
-        url = boat.Picture__c.substring(secondSlashIndex);
-        return 'background-image:url(\'' + url + '\')';
+        if (this.boat.Picture__c) {
+            return 'background-image:url(\'' + this.boat.Picture__c + '\')';
+        } else {
+            return '';
+        }
     }
 
     get tileClass() {
@@ -29,6 +31,6 @@ export default class BoatTile extends LightningElement {
             }
         });
         this.dispatchEvent(boatSelect);
-        this.selectedBoatId = this.boat.Id;
+        // this.selectedBoatId = this.boat.Id;
     }
 }

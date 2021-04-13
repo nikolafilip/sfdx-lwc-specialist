@@ -56,13 +56,11 @@ export default class BoatMap extends LightningElement {
     }
 
     updateMap(Longitude, Latitude) {
-        mapMarker = {
-            location: {
-                Latitude: Latitude,
-                Longitude: Longitude
-            }
-        };
-        this.mapMarkers.push(mapMarker);
+        this.mapMarkers = [{
+            location: { Latitude, Longitude },
+            title: this.name,
+            description: 'Coords: ${Latitude}, ${Longitude}'
+        }];
     }
 
     get showMap() {

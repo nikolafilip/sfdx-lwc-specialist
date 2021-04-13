@@ -7,7 +7,7 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__RecordPage">
-            <property name="similarBy" label="Enter the property you want to compare by" type="String" datasource="BoatType__c,Price__c,Length__c"></property>
+            <property name="similarBy" label="Enter the property you want to compare by" type="String" datasource="Type,Price,Length"></property>
             <objects>
                 <object>Boat__c</object>
             </objects>
